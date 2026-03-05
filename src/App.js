@@ -329,7 +329,7 @@ export default function App() {
   useEffect(() => {
     if (!session) return;
     setLoadingClips(true);
-    supabase.from("clips").select("*").eq("user_id", session.user.id).order("created_at", { ascending: false })
+    supabase.from("clips").select("*").order("created_at", { ascending: false })
       .then(({ data }) => { setClips(data || []); setLoadingClips(false); });
   }, [session]);
 
