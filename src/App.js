@@ -491,7 +491,6 @@ export default function App() {
                       <span style={{ color: "#e2e8f0", fontSize: "0.88rem", flex: 1, marginRight: "0.5rem", whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>{c.label}</span>
                       <div style={{ display: "flex", gap: "0.3rem", alignItems: "center", flexShrink: 0 }}>
                         <Tag color="gray">⏱ {fmtTime(c.freeze_at)}</Tag>
-                        <Tag color="purple">{c.answer}</Tag>
                         <button onClick={() => handleDeleteClip(c.id, c.video_path)} style={{ background: "none", border: "none", color: "#4b5563", cursor: "pointer", fontSize: "0.9rem", padding: "0 0.2rem" }}>✕</button>
                       </div>
                     </div>
